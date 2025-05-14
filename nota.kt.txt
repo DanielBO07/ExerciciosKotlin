@@ -1,0 +1,26 @@
+import kotlin.random.Random
+fun main() {
+    val nota1 = gerador()
+    println("Nota1 $nota1")
+    val nota2 = gerador()
+    println("Nota2 $nota2")
+    val nota3 = gerador()
+    println("Nota3 $nota3")
+    val media = media(nota1, nota2, nota3)
+    println("media $media")
+    if(media >= 9){
+        println("PD")
+    }
+    if(media < 9 && media >= 7){
+        println("ED")
+    }
+    if(media < 7){
+        println("ND")
+    }
+}
+fun gerador():Int{
+    return Random.nextInt(0,11)
+}
+fun media(x:Int,y:Int,z:Int):Int{
+    return (x+y+z)/3
+}
